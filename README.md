@@ -44,6 +44,7 @@ RUN echo "charset utf-8;" >> /etc/nginx/conf.d/charset.conf
   - `ENV APP_ENV=dev`로 환경변수 주입
   - `COPY app/`로 직접 작성한 정적 페이지 삽입
   - nginx 설정에 `charset utf-8;` 추가하여 브라우저 한글 인코딩 깨짐 방지
+  - 인코딩 깨짐 방지 전 스크린샷
 
 **빌드/실행**
 ```bash
@@ -56,7 +57,7 @@ docker run -d -p 8081:80 --name my-web-8081 my-web:2.0
 - `http://localhost:8080` → "안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!"
 - `http://localhost:8081` → "안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!!!!"
 - (서로 다른 이미지 버전이 각기 다른 포트에서 정상 응답함을 `curl` 및 브라우저로 확인)
-- 스크린샷: [screenshots/](screenshots/) *(브라우저 주소창 포함 캡처 추가 예정)*
+- 스크린샷: 
 
 ## 6) 바인드 마운트 반영 증거
 ```bash
