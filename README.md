@@ -44,7 +44,7 @@ RUN echo "charset utf-8;" >> /etc/nginx/conf.d/charset.conf
   - `ENV APP_ENV=dev`로 환경변수 주입
   - `COPY app/`로 직접 작성한 정적 페이지 삽입
   - nginx 설정에 `charset utf-8;` 추가하여 브라우저 한글 인코딩 깨짐 방지
-  - 인코딩 깨짐 방지 전 스크린샷
+  - 인코딩 깨짐 방지 전 스크린샷: logs/인코딩 문제.png
 
 **빌드/실행**
 ```bash
