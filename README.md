@@ -57,7 +57,7 @@ docker run -d -p 8081:80 --name my-web-8081 my-web:2.0
 - `http://localhost:8080` → "안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!"
 - `http://localhost:8081` → "안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!!!!"
 - (서로 다른 이미지 버전이 각기 다른 포트에서 정상 응답함을 `curl` 및 브라우저로 확인)
-- 8080 포트 스크린샷:logs/8080 포트.png
+- 8080 포트 스크린샷:[logs/8080 포트.png](https://github.com/joohwan231/E1-1/blob/b73ff28301f9d65320e7c43def97f87fcaa77e59/logs/8080%20%ED%8F%AC%ED%8A%B8.png)
 - 8081 포트 스크린샷:https://github.com/joohwan231/E1-1/blob/4d69f137b58d617df8d8cee43e6b94d563506765/logs/8081%20%ED%8F%AC%ED%8A%B8.png
 
 ## 6) 바인드 마운트 반영 증거
