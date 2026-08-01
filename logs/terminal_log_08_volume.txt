@@ -1,0 +1,17 @@
+Script started on 2026-08-01 17:08:46+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker volume create mydata[27mdocker volume create mydata
+[?2004lmydata
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d --name vol-test -v mydata:/data ubuntu sleep infinity[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --name vol-test -v mydata:/data ubuntu sleep infinity
+[?2004l8231a5785fd4117bb1acbeee5d74b9625bf669dfaf0e91a13dd42ce09ac9c878
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker exec -it vol-test bash -c "echo '볼륨 영속성 테스트 - 김주환' > /data/hel[27m[7ml[27m[7mo.txt && cat /data/hello.txt"[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ docker exec -it vol-test bash -c "echo '볼륨 영속성 테스트 - 김주환' > /data/hello.txt && cat /data/hello.txt"
+[?2004l볼륨 영속성 테스트 - 김주환
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker rm -f vol-test[27mdocker rm -f vol-test
+[?2004lvol-test
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d --name vol-test2 -v mydata:/data ubuntu sleep infinity[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --name vol-test2 -v mydata:/data ubuntu sleep infinity
+[?2004l68f656fed57232a42c4452c156a39c30180aa16794a768685a8015c0d5cc75f5
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker exec -it vol-test2 bash -c "cat /data/hello.txt"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker exec -it vol-test2 bash -c "cat /data/hello.txt"
+[?2004l볼륨 영속성 테스트 - 김주환
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-08-01 17:09:33+09:00 [COMMAND_EXIT_CODE="0"]

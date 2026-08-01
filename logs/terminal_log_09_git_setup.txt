@@ -1,0 +1,36 @@
+Script started on 2026-08-01 17:12:20+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit --version[27mgit --version
+[?2004lgit version 2.53.0
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit config --global user.name "joohwan231"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global user.name "joohwan231"
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit config --global user.email "your_email@example.com"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pgit config --global user.name "joohwan231"--version[Kexit[Kgit config --global user.email "joohwan231@gmail.com"[11Pname "joohwan231[C[11@email "joohwan231@gmail.com[C
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit config --global init.defaultBranch main[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --global init.defaultBranch main
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit config --list[27mgit config --list
+[?2004l[?1h=user.name=joohwan231[m
+user.email=joohwan231@gmail.com[m
+init.defaultbranch=main[m
+[K[?1l>[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcd ~/codyssey-workstation[27m
+[7mgit init[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ cd ~/codyssey-workstation
+git init
+[?2004lInitialized empty Git repository in /home/shsus/codyssey-workstation/.git/
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit status[27mgit status
+[?2004lOn branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mDockerfile[m
+	[31mREADME.md[m
+	[31mapp/[m
+	[31mlogs/[m
+	[31mpermtest.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mecho ".DS_Store" > .gitignore[27mecho ".DS_Store" > .gitignore
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcat .gitignore[27mcat .gitignore
+[?2004l.DS_Store
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mhttps://github.com/joohwan231/E1-1.git[27mhttps://github.com/joohwan231/E1-1.git
+[?2004lbash: https://github.com/joohwan231/E1-1.git: No such file or directory
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit remote add origin https://github.com/joohwan231/E1-1.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit remote add origin https://github.com/joohwan231/E1-1.git
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mgit remote -v[27mgit remote -v
+[?2004lorigin	https://github.com/joohwan231/E1-1.g

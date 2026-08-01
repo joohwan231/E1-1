@@ -1,0 +1,17 @@
+Script started on 2026-08-01 16:47:00+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mtouch permtest.txt[27mtouch permtest.txt
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mls -l permtest.txt[27mls -l permtest.txt
+[?2004l-rw-r--r-- 1 shsus shsus 0 Aug  1 16:47 permtest.txt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mchmod 600 permtest.txt[27mchmod 600 permtest.txt
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mls -l permtest.txt[27mls -l permtest.txt
+[?2004l-rw------- 1 shsus shsus 0 Aug  1 16:47 permtest.txt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mmkdir permtest_dir[27mmkdir permtest_dir
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mls -ld permtest_dir[27mls -ld permtest_dir
+[?2004ldrwxr-xr-x 2 shsus shsus 4096 Aug  1 16:47 [0m[01;34mpermtest_dir[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mchmod 700 permtest_dir[27mchmod 700 permtest_dir
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mls -ld permtest_dir[27mls -ld permtest_dir
+[?2004ldrwx------ 2 shsus shsus 4096 Aug  1 16:47 [0m[01;34mpermtest_dir[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-08-01 16:47:42+09:00 [COMMAND_EXIT_CODE="0"]

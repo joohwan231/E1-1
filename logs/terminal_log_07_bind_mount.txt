@@ -1,0 +1,12 @@
+Script started on 2026-08-01 17:07:28+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8082:80 --name my-web-bind -v "$(pwd)/app:/usr/share/nginx/html[27m[7m"[27m[7m my-web:1.0[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ docker run -d -p 8082:80 --name my-web-bind -v "$(pwd)/app:/usr/share/nginx/html" my-web:1.0
+[?2004l8a79c0fb1c12f69564a18e6c178d2f6cde7c6a1c59ddbcd9899baebdd878b838
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8082[27mcurl http://localhost:8082
+[?2004l<html><head><meta charset="UTF-8"></head><body><h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!!!!</h1></body></html>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mecho '<html><head><meta charset="UTF-8"></head><body><h1>Updated via bind mount![27m[7m [27m[7m바인드 마운트 반영 테스트</h1></body></html>' > app/index.html[27m[Aecho '<html><head><meta charset="UTF-8"></head><body><h1>Updated via bind mount! 바인드 마운트 반영 테스트</h1></body></html>' > app/index.html
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8082[27mcurl http://localhost:8082
+[?2004l<html><head><meta charset="UTF-8"></head><body><h1>Updated via bind mount! 바인드 마운트 반영 테스트</h1></body></html>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-08-01 17:08:40+09:00 [COMMAND_EXIT_CODE="0"]

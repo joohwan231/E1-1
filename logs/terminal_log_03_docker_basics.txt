@@ -1,0 +1,92 @@
+Script started on 2026-08-01 16:49:07+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run hello-world[27mdocker run hello-world
+[?2004lUnable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+
+[1A[2K4f55086f7dd0: Pulling fs layer [1B[1A[2K4f55086f7dd0: Download complete [1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 1 s[1B[1A[2K4f55086f7dd0: Extracting 2 s[1B[1A[2K4f55086f7dd0: Extracting 2 s[1B[1A[2K4f55086f7dd0: Pull complete [1B
+[1A[2Kd5e71e642bf5: Download complete [1BDigest: sha256:c3cbe1cc1aa588a64951ac6286e0df7b27fe2e6324b1001c619bb358770c0178
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -it ubuntu bash[27mdocker run -it ubuntu bash
+[?2004lUnable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2Ka3679419df18: Pulling fs layer [1B
+[1A[2Ked819469700f: Pulling fs layer [1B[2A[2Ka3679419df18: Download complete [2B[1A[2Ked819469700f: Downloading [=>                                                 ]  1.049MB/41.58MB[1B[1A[2Ked819469700f: Downloading [==>                                                ]  2.097MB/41.58MB[1B[1A[2Ked819469700f: Downloading [===>                                               ]  3.146MB/41.58MB[1B[1A[2Ked819469700f: Downloading [=====>                                             ]  4.194MB/41.58MB[1B[1A[2Ked819469700f: Downloading [=======>                                           ]  6.291MB/41.58MB[1B[1A[2Ked819469700f: Downloading [========>                                          ]   7.34MB/41.58MB[1B[1A[2Ked819469700f: Downloading [===========>                                       ]  9.437MB/41.58MB[1B[1A[2Ked819469700f: Downloading [============>                                      ]  10.49MB/41.58MB[1B[1A[2Ked819469700f: Downloading [=============>                                     ]  11.53MB/41.58MB[1B[1A[2Ked819469700f: Downloading [================>                                  ]  13.63MB/41.58MB[1B[1A[2Ked819469700f: Downloading [=================>                                 ]  14.68MB/41.58MB[1B[1A[2Ked819469700f: Downloading [==================>                                ]  15.73MB/41.58MB[1B[1A[2Ked819469700f: Downloading [====================>                              ]  16.78MB/41.58MB[1B[1A[2Ked819469700f: Downloading [======================>                            ]  18.87MB/41.58MB[1B[1A[2Ked819469700f: Downloading [=======================>                           ]  19.92MB/41.58MB[1B[1A[2Ked819469700f: Downloading [=========================>                         ]  20.97MB/41.58MB[1B
+[1A[2Ke16351a257e4: Downloading [==========================================>        ]  3.146MB/3.705MB[1B[2A[2Ked819469700f: Downloading [===========================>                       ]  23.07MB/41.58MB[2B[1A[2Ke16351a257e4: Download complete [1B[2A[2Ked819469700f: Downloading [==============================>                    ]  25.17MB/41.58MB[2B[2A[2Ked819469700f: Downloading [===============================>                   ]  26.21MB/41.58MB[2B[2A[2Ked819469700f: Downloading [================================>                  ]  27.26MB/41.58MB[2B[2A[2Ked819469700f: Downloading [===================================>               ]  29.36MB/41.58MB[2B[2A[2Ked819469700f: Downloading [====================================>              ]  30.41MB/41.58MB[2B[2A[2Ked819469700f: Downloading [=====================================>             ]  31.46MB/41.58MB[2B[2A[2Ked819469700f: Downloading [========================================>          ]  33.55MB/41.58MB[2B[2A[2Ked819469700f: Downloading [=========================================>         ]   34.6MB/41.58MB[2B[2A[2Ked819469700f: Downloading [==========================================>        ]  35.65MB/41.58MB[2B[2A[2Ked819469700f: Downloading [=============================================>     ]  37.75MB/41.58MB[2B[2A[2Ked819469700f: Downloading [==============================================>    ]   38.8MB/41.58MB[2B[2A[2Ked819469700f: Downloading [===============================================>   ]  39.85MB/41.58MB[2B[2A[2Ked819469700f: Download complete [2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 1 s[2B[2A[2Ked819469700f: Extracting 2 s[2B[2A[2Ked819469700f: Extracting 2 s[2B[2A[2Ked819469700f: Extracting 2 s[2B[3A[2Ka3679419df18: Pull complete [3B[2A[2Ked819469700f: Pull complete [2BDigest: sha256:3131b4cc82a783df6c9df078f86e01819a13594b865c2cad47bd1bca2b7063bb
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@dbce311b65d0: /root@dbce311b65d0:/# ;s  ls
+[?2004l[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;36mlib[0m  [01;36mlib64[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+[?2004h]0;root@dbce311b65d0: /root@dbce311b65d0:/# [7mecho "hello from container"[27mecho "hello from container"
+[?2004lhello from container
+[?2004h]0;root@dbce311b65d0: /root@dbce311b65d0:/# [K[7mexit[27mexit
+[?2004lexit
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d --name test-container ubuntu sleep infinity[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --name test-container ubuntu sleep infinity
+[?2004l7aeb5b68e4f319d7bf95217eb1662197fc279558e6eee6adaa28b76813e76ca3
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker ps[27mdocker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND            CREATED         STATUS         PORTS     NAMES
+7aeb5b68e4f3   ubuntu    "sleep infinity"   5 seconds ago   Up 4 seconds             test-container
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker exec -it test-container bash[27mdocker exec -it test-container bash
+[?2004l[?2004h]0;root@7aeb5b68e4f3: /root@7aeb5b68e4f3:/# [7mecho "hi from exec"[27mecho "hi from exec"
+[?2004lhi from exec
+[?2004h]0;root@7aeb5b68e4f3: /root@7aeb5b68e4f3:/# [7mexit[27mexit
+[?2004lexit
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker ps[27mdocker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND            CREATED          STATUS          PORTS     NAMES
+7aeb5b68e4f3   ubuntu    "sleep infinity"   26 seconds ago   Up 26 seconds             test-container
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker logs test-container[27mdocker logs test-container
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker stats --no-stream[27mdocker stats --no-stream
+[?2004lCONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS
+7aeb5b68e4f3   test-container   0.00%     5.266MiB / 15.41GiB   0.03%     1.17kB / 126B   17.9MB / 0B   1
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker images[27mdocker images
+[?2004l                                                                                                    [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mhello-world:latest[0m   [39mc3cbe1cc1aa5[0m       [39m25.9kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mmy-nginx:1.0[0m         [39m35df8493fe14[0m       [39m92.7MB[0m         [39m26.1MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mubuntu:latest[0m        [39m3131b4cc82a7[0m        [39m161MB[0m         [39m45.3MB[0m   [38;5;0m[48;5;14m U [0m  
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker ps -a[27mdocker ps -a
+[?2004lCONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                          PORTS                  NAMES
+7aeb5b68e4f3   ubuntu         "sleep infinity"         About a minute ago   Up About a minute                                      test-container
+dbce311b65d0   ubuntu         "bash"                   About a minute ago   Exited (0) About a minute ago                          vigilant_meitner
+ec68cd5b0be9   hello-world    "/hello"                 2 minutes ago        Exited (0) 2 minutes ago                               loving_leavitt
+3a6337072810   my-nginx:1.0   "/docker-entrypoint.…"   3 days ago           Exited (255) 34 minutes ago     0.0.0.0:8080->80/tcp   my-web-server
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker rm my-web-server[27mdocker rm my-web-server
+[?2004lmy-web-server
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker rmi my-nginx:1.0[27mdocker rmi my-nginx:1.0
+[?2004lUntagged: my-nginx:1.0
+Deleted: sha256:35df8493fe1499375ddade4535ffffc3b434620bae3932402acd2429268d1f06
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker images[27mdocker images
+[?2004l                                                                                                    [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mhello-world:latest[0m   [39mc3cbe1cc1aa5[0m       [39m25.9kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mubuntu:latest[0m        [39m3131b4cc82a7[0m        [39m161MB[0m         [39m45.3MB[0m   [38;5;0m[48;5;14m U [0m  
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker ps -a[27mdocker ps -a
+[?2004lCONTAINER ID   IMAGE         COMMAND            CREATED              STATUS                     PORTS     NAMES
+7aeb5b68e4f3   ubuntu        "sleep infinity"   About a minute ago   Up About a minute                    test-container
+dbce311b65d0   ubuntu        "bash"             2 minutes ago        Exited (0) 2 minutes ago             vigilant_meitner
+ec68cd5b0be9   hello-world   "/hello"           2 minutes ago        Exited (0) 2 minutes ago             loving_leavitt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-08-01 16:52:20+09:00 [COMMAND_EXIT_CODE="0"]

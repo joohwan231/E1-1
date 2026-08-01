@@ -1,0 +1,189 @@
+Script started on 2026-08-01 16:36:10+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker --version[27m
+[7mdocker info[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ docker --version
+docker info
+[?2004lDocker version 29.6.2, build dfc4efb
+Client:
+ Version:    29.6.2
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.111.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.27.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.35.0-desktop.2
+    Path:     /usr/local/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.3.1
+    Path:     /usr/local/lib/docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     /usr/local/lib/docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.4.3
+    Path:     /usr/local/lib/docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.7
+    Path:     /usr/local/lib/docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     /usr/local/lib/docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.43.3
+    Path:     /usr/local/lib/docker/cli-plugins/docker-mcp
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.6
+    Path:     /usr/local/lib/docker/cli-plugins/docker-model
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.6.9
+    Path:     /usr/local/lib/docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.2.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-pass
+  sandbox: "docker sandbox" is deprecated, use Docker Sandboxes instead (Docker Inc.)
+    Version:  v0.13.0
+    Path:     /usr/local/lib/docker/cli-plugins/docker-sandbox
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.24.0
+    Path:     /home/shsus/.docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 1
+  Running: 1
+  Paused: 0
+  Stopped: 0
+ Images: 1
+ Server Version: 29.6.2
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: e53c7c1516c3b2bff98eb76f1f4117477e6f4e66
+ runc version: v1.3.6-0-g491b69ba
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.33.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 15.41GiB
+ Name: docker-desktop
+ ID: 27ebe58b-bf49-4beb-98ce-0220147740d8
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///var/run/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ pwd
+[?2004l/home/shsus/codyssey-workstation
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ ls -la
+[?2004ltotal 16
+drwxr-xr-x 4 shsus shsus 4096 Aug  1 16:36 [0m[01;34m.[0m
+drwxr-x--- 9 shsus shsus 4096 Aug  1 16:36 [01;34m..[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34mlogs[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34msite[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mmkdir -p app[27m
+[7mmkdir -p screenshots[27m
+[7mls -la[27m[A[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ mkdir -p app
+mkdir -p screenshots
+ls -la
+[?2004ltotal 24
+drwxr-xr-x 6 shsus shsus 4096 Aug  1 16:37 [0m[01;34m.[0m
+drwxr-x--- 9 shsus shsus 4096 Aug  1 16:36 [01;34m..[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mapp[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34mlogs[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mscreenshots[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34msite[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mtouch README.md[27m
+[7mls -la[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ touch README.md
+ls -la
+[?2004ltotal 24
+drwxr-xr-x 6 shsus shsus 4096 Aug  1 16:37 [0m[01;34m.[0m
+drwxr-x--- 9 shsus shsus 4096 Aug  1 16:36 [01;34m..[0m
+-rw-r--r-- 1 shsus shsus    0 Aug  1 16:37 README.md
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mapp[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34mlogs[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mscreenshots[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34msite[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mmkdir practice[27m
+[7mcd practice[27m
+[7mpwd[27m[A[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ mkdir practice
+cd practice
+pwd
+[?2004l/home/shsus/codyssey-workstation/practice
+[?2004h]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ [7mtouch test.txt[27m
+[7mcat test.txt[27m
+[7mecho "practice content" > test.txt[27m
+[7mcat test.txt[27m[A[A[A]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ touch test.txt
+cat test.txt
+echo "practice content" > test.txt
+cat test.txt
+[?2004lpractice content
+[?2004h]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ [7mcp test.txt test_copy.txt[27m
+[7mls -la[27m[A]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ cp test.txt test_copy.txt
+ls -la
+[?2004ltotal 16
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [0m[01;34m.[0m
+drwxr-xr-x 7 shsus shsus 4096 Aug  1 16:37 [01;34m..[0m
+-rw-r--r-- 1 shsus shsus   17 Aug  1 16:37 test.txt
+-rw-r--r-- 1 shsus shsus   17 Aug  1 16:37 test_copy.txt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ [7mmv test_copy.txt test_renamed.txt[27m
+[7mls -la[27m[A]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ mv test_copy.txt test_renamed.txt
+ls -la
+[?2004ltotal 16
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:38 [0m[01;34m.[0m
+drwxr-xr-x 7 shsus shsus 4096 Aug  1 16:37 [01;34m..[0m
+-rw-r--r-- 1 shsus shsus   17 Aug  1 16:37 test.txt
+-rw-r--r-- 1 shsus shsus   17 Aug  1 16:37 test_renamed.txt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ [7mcd ..[27m
+[7mrm -rf practice[27m
+[7mls -la[27m[A[A]0;shsus@localhost: ~/codyssey-workstation/practice[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation/practice[00m$ cd ..
+rm -rf practice
+ls -la
+[?2004ltotal 24
+drwxr-xr-x 6 shsus shsus 4096 Aug  1 16:38 [0m[01;34m.[0m
+drwxr-x--- 9 shsus shsus 4096 Aug  1 16:36 [01;34m..[0m
+-rw-r--r-- 1 shsus shsus    0 Aug  1 16:37 README.md
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mapp[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34mlogs[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mscreenshots[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:36 [01;34msite[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-08-01 16:38:52+09:00 [COMMAND_EXIT_CODE="0"]

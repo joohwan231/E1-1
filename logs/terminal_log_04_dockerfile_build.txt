@@ -1,0 +1,321 @@
+Script started on 2026-08-01 16:52:59+09:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="120" LINES="30"]
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mecho '<h1>Hello from my custom Docker image!</h1>' > app/index.html[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho '<h1>Hello from my custom Docker image!</h1>' > app/index.html
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcat app/index.html[27mcat app/index.html
+[?2004l<h1>Hello from my custom Docker image!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcat > Dockerfile << 'EOF'[27m
+[7mFROM nginx:alpine[27m
+[7mLABEL org.opencontainers.image.title="my-custom-nginx"[27m
+[7mENV APP_ENV=dev[27m
+[7mCOPY app/ /usr/share/nginx/html/[27m
+[7mEOF[27m[A[A[A[A[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ cat > Dockerfile << 'EOF'
+FROM nginx:alpine
+LABEL org.opencontainers.image.title="my-custom-nginx"
+ENV APP_ENV=dev
+COPY app/ /usr/share/nginx/html/
+EOF
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcat Dockerfile[27mcat Dockerfile
+[?2004lFROM nginx:alpine
+LABEL org.opencontainers.image.title="my-custom-nginx"
+ENV APP_ENV=dev
+COPY app/ /usr/share/nginx/html/
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mls -la[27mls -la
+[?2004ltotal 28
+drwxr-xr-x 6 shsus shsus 4096 Aug  1 16:53 [0m[01;34m.[0m
+drwxr-x--- 7 shsus shsus 4096 Aug  1 16:40 [01;34m..[0m
+-rw-r--r-- 1 shsus shsus  122 Aug  1 16:53 Dockerfile
+-rw-r--r-- 1 shsus shsus    0 Aug  1 16:37 README.md
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:53 [01;34mapp[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:52 [01;34mlogs[0m
+-rw------- 1 shsus shsus    0 Aug  1 16:47 permtest.txt
+drwx------ 2 shsus shsus 4096 Aug  1 16:47 [01;34mpermtest_dir[0m
+drwxr-xr-x 2 shsus shsus 4096 Aug  1 16:37 [01;34mscreenshots[0m
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mls -la[27m[1Pls -l[K[K[K[K[K[7mdocker build -t my-web:1.0 .[27mdocker build -t my-web:1.0 .
+[?2004l[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                  docker:default
+ => [internal] load build definition from Dockerfile                                                               0.0s
+[?25h[1A[1A[0G[?25l[+] Building 0.2s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (1/3)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+ => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (2/3)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.9s
+[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.1s (2/3)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.1s
+[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.3s (2/3)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.2s
+[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.4s (3/3)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.4s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.5s (7/8)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.4s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 112B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m => exporting to image                                                                                             0.1s
+[34m => => exporting layers                                                                                            0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.6s (8/8)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.4s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 112B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m[34m => exporting to image                                                                                             0.2s
+[0m[34m => => exporting layers                                                                                            0.1s
+[0m[34m => => exporting manifest sha256:53e483c8b4653b00720483c6eca8196626142e352bd8e25b487c523707197dcd                  0.0s
+[0m[34m => => exporting config sha256:a5614ccba3c71389069cf6244888c228ed8ac41c1e9adf0947cf77ca3e943e86                    0.0s
+[0m[34m => => exporting attestation manifest sha256:c01a55a855f45b7d80960ef914452538fa493dfe450027d206137b81ad6b1af8      0.0s
+[0m[34m => => exporting manifest list sha256:d0e4bb3a73a6283ab046327e011c6510f524af8df8e21408215b945d4253cea6             0.0s
+[0m[34m => => naming to docker.io/library/my-web:1.0                                                                      0.0s
+[0m[34m => => unpacking to docker.io/library/my-web:1.0                                                                   0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.7s (8/8) FINISHED                                                                         docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    1.4s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io                                                       0.0s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 112B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m[34m => exporting to image                                                                                             0.2s
+[0m[34m => => exporting layers                                                                                            0.1s
+[0m[34m => => exporting manifest sha256:53e483c8b4653b00720483c6eca8196626142e352bd8e25b487c523707197dcd                  0.0s
+[0m[34m => => exporting config sha256:a5614ccba3c71389069cf6244888c228ed8ac41c1e9adf0947cf77ca3e943e86                    0.0s
+[0m[34m => => exporting attestation manifest sha256:c01a55a855f45b7d80960ef914452538fa493dfe450027d206137b81ad6b1af8      0.0s
+[0m[34m => => exporting manifest list sha256:d0e4bb3a73a6283ab046327e011c6510f524af8df8e21408215b945d4253cea6             0.0s
+[0m[34m => => naming to docker.io/library/my-web:1.0                                                                      0.0s
+[0m[34m => => unpacking to docker.io/library/my-web:1.0                                                                   0.0s
+[0m[?25h[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker images[27mdocker images
+[?2004l                                                                                                    [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mhello-world:latest[0m   [39mc3cbe1cc1aa5[0m       [39m25.9kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mmy-web:1.0[0m           [39md0e4bb3a73a6[0m       [39m92.7MB[0m         [39m26.1MB[0m        
+[34m[1mubuntu:latest[0m        [39m3131b4cc82a7[0m        [39m161MB[0m         [39m45.3MB[0m   [38;5;0m[48;5;14m U [0m  
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0
+[?2004l1d0a24798e10bdf34e89bb3723396f1b32e92bfa95466874efaca25749ae0140
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8080[27mcurl http://localhost:8080
+[?2004l<h1>Hello from my custom Docker image!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8081:80 --name my-web-8081 my-web:1.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8081:80 --name my-web-8081 my-web:1.0
+[?2004l59487b8b34249ec70288f2a2e9cacde6a43c987c9315032bced39652a02a9325
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8081[27mcurl http://localhost:8081
+[?2004l<h1>Hello from my custom Docker image!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mecho '<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!</h1>' > app/index[27m[7m.[27m[7mhtml[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ echo '<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!</h1>' > app/index.html
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcat app/index.html[27mcat app/index.html
+[?2004l<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker build -t my-web:1.0 .[27mdocker build -t my-web:1.0 .
+[?2004l[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                  docker:default
+[?25h[1A[0G[?25l[+] Building 0.2s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (2/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[0m[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (6/7)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 153B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m => exporting to image                                                                                             0.0s
+[34m => => exporting layers                                                                                            0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.1s (7/7) FINISHED                                                                         docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 153B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m[34m => exporting to image                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                            0.0s
+[0m[34m => => exporting manifest sha256:0035d4a31ff7874b371e27c44846c4d8f489457be16a9b46a4921d9e78d37a84                  0.0s
+[0m[34m => => exporting config sha256:198b6fe793cf18ecd15acc5024f080c297041ade2a1e8087236c73f9c8ae6d7c                    0.0s
+[0m[34m => => exporting attestation manifest sha256:c2a00811c72b9173c44224777caccfadac6d0928e59701de0b380c04c4621226      0.0s
+[0m[34m => => exporting manifest list sha256:2e39b2c3636ba9072578e6df783d322a8184bff1b5a7a1e1ebcd150e794af349             0.0s
+[0m[34m => => naming to docker.io/library/my-web:1.0                                                                      0.0s
+[0m[34m => => unpacking to docker.io/library/my-web:1.0                                                                   0.0s
+[0m[?25h[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker images[27mdocker images
+[?2004l                                                                                                    [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mhello-world:latest[0m   [39mc3cbe1cc1aa5[0m       [39m25.9kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mmy-web:1.0[0m           [39m2e39b2c3636b[0m       [39m92.7MB[0m         [39m26.1MB[0m        
+[34m[1mubuntu:latest[0m        [39m3131b4cc82a7[0m        [39m161MB[0m         [39m45.3MB[0m   [38;5;0m[48;5;14m U [0m  
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0
+[?2004ldocker: Error response from daemon: Conflict. The container name "/my-web-8080" is already in use by container "1d0a24798e10bdf34e89bb3723396f1b32e92bfa95466874efaca25749ae0140". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ 
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8080[27mcurl http://localhost:8080
+[?2004l<h1>Hello from my custom Docker image!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker ps -a[27mdocker ps -a
+[?2004lCONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                     PORTS                                     NAMES
+59487b8b3424   d0e4bb3a73a6   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes               0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   my-web-8081
+1d0a24798e10   d0e4bb3a73a6   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes               0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-8080
+7aeb5b68e4f3   ubuntu         "sleep infinity"         6 minutes ago   Up 6 minutes                                                         test-container
+dbce311b65d0   ubuntu         "bash"                   7 minutes ago   Exited (0) 6 minutes ago                                             vigilant_meitner
+ec68cd5b0be9   hello-world    "/hello"                 7 minutes ago   Exited (0) 7 minutes ago                                             loving_leavitt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker rm -f my-web-8080[27mdocker rm -f my-web-8080
+[?2004lmy-web-8080
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0
+[?2004l718d81d0df1b40f50957a7f27b320e73dd16d2ca09eee08118684c930108b006
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8080[27mcurl http://localhost:8080
+[?2004l<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mecho '<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!!!!</h1>' > app/in[27m[7md[27m[7mex.html[27m[A]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ echo '<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!!!!</h1>' > app/index.html
+[?2004l[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker build -t my-web:2.0 .[27mdocker build -t my-web:2.0 .
+[?2004l[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                  docker:default
+[?25h[1A[0G[?25l[+] Building 0.2s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (1/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (2/2)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[0m[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (6/7)                                                                                  docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 156B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m => exporting to image                                                                                             0.1s
+[34m => => exporting layers                                                                                            0.0s
+[0m[34m => => exporting manifest sha256:42305a785c46a3d90df2c840842e58f9ee690bc788e6f79a4ac7a4c7f784f8b1                  0.0s
+[0m => => exporting config sha256:f9ed1dd751285a1970909e4f0825b9ab04845e92e1a62555d4a33f829a46211f                    0.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (7/7) FINISHED                                                                         docker:default
+[34m => [internal] load build definition from Dockerfile                                                               0.0s
+[0m[34m => => transferring dockerfile: 159B                                                                               0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine                                                    0.8s
+[0m[34m => [internal] load .dockerignore                                                                                  0.0s
+[0m[34m => => transferring context: 2B                                                                                    0.0s
+[0m[34m => [internal] load build context                                                                                  0.0s
+[0m[34m => => transferring context: 156B                                                                                  0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                         0.0s
+[0m[34m => exporting to image                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                            0.0s
+[0m[34m => => exporting manifest sha256:42305a785c46a3d90df2c840842e58f9ee690bc788e6f79a4ac7a4c7f784f8b1                  0.0s
+[0m[34m => => exporting config sha256:f9ed1dd751285a1970909e4f0825b9ab04845e92e1a62555d4a33f829a46211f                    0.0s
+[0m[34m => => exporting attestation manifest sha256:73af859e795ad58e101b54eb410bc2eb093ad6abcd563f2a9f251189c0085615      0.0s
+[0m[34m => => exporting manifest list sha256:7f8a209d7b1950fa7b6e7714288e3a0f57286f9973bfa7e8430b72574698cf14             0.0s
+[0m[34m => => naming to docker.io/library/my-web:2.0                                                                      0.0s
+[0m[34m => => unpacking to docker.io/library/my-web:2.0                                                                   0.0s
+[0m[?25h[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8081:80 --name my-web-8081 my-web:2.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8081:80 --name my-web-8081 my-web:2.0
+[?2004ldocker: Error response from daemon: Conflict. The container name "/my-web-8081" is already in use by container "59487b8b34249ec70288f2a2e9cacde6a43c987c9315032bced39652a02a9325". You have to remove (or rename) that container to be able to reuse that name.
+
+Run 'docker run --help' for more information
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker ps -a[27mdocker ps -a
+[?2004lCONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS                                     NAMES
+718d81d0df1b   my-web:1.0     "/docker-entrypoint.…"   47 seconds ago   Up 46 seconds              0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-8080
+59487b8b3424   d0e4bb3a73a6   "/docker-entrypoint.…"   3 minutes ago    Up 3 minutes               0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   my-web-8081
+7aeb5b68e4f3   ubuntu         "sleep infinity"         7 minutes ago    Up 7 minutes                                                         test-container
+dbce311b65d0   ubuntu         "bash"                   8 minutes ago    Exited (0) 7 minutes ago                                             vigilant_meitner
+ec68cd5b0be9   hello-world    "/hello"                 8 minutes ago    Exited (0) 8 minutes ago                                             loving_leavitt
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker rm -f my-web-8080 my-web-8081[27mdocker rm -f my-web-8080 my-web-8081
+[?2004lmy-web-8080
+my-web-8081
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8080:80 --name my-web-8080 my-web:1.0
+[?2004l6c86dddf5a3e38fc797f2df45463f5b5d37cc06529bbb9f2b5b9ddb05537fb31
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8080[27mcurl http://localhost:8080
+[?2004l<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mdocker run -d -p 8081:80 --name my-web-8081 my-web:2.0[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d -p 8081:80 --name my-web-8081 my-web:2.0
+[?2004l422160298dcbebbdeea622178c47271dab3ba918cb3f7b6254052ebee41ee11a
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mcurl http://localhost:8081[27mcurl http://localhost:8081
+[?2004l<h1>안녕하세요 저는 코디세이 루키마리너2기 김주환입니다!!!!</h1>
+[?2004h]0;shsus@localhost: ~/codyssey-workstation[01;32mshsus@localhost[00m:[01;34m~/codyssey-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-08-01 16:59:15+09:00 [COMMAND_EXIT_CODE="0"]
